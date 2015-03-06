@@ -71,7 +71,7 @@ void score_diagonal(int x,int p)
             {
                 score_cpu[(row_count[x]+1)][temp_minus] -= 2;
             }
-            if(score_cpu[(row_count[x]+2)][temp_minus-1] <=3 && score_cpu[(row_count[x]+2)][temp_minus]!= p && score_cpu[(row_count[x]+2)][temp_minus]!= (p*-1) && row_count[x]+2<N && temp_minus-1>=0)
+            if(score_cpu[(row_count[x]+2)][temp_minus-1] <=3 && score_cpu[(row_count[x]+2)][temp_minus-1]!= p && score_cpu[(row_count[x]+2)][temp_minus-1]!= (p*-1) && row_count[x]+2<N && temp_minus-1>=0)
             {
                 score_cpu[(row_count[x]+2)][temp_minus-1] -= 1;
             }
@@ -83,7 +83,7 @@ void score_diagonal(int x,int p)
             {
                 score_cpu[(row_count[x]+1)][temp_plus] -= 2;
             }
-            if(score_cpu[(row_count[x]+2)][temp_plus+1] <=3 && score_cpu[(row_count[x]+2)][temp_plus]!= p && score_cpu[(row_count[x]+2)][temp_plus]!= (p*-1)&& row_count[x]+2<N && temp_plus+1<N)
+            if(score_cpu[(row_count[x]+2)][temp_plus+1] <=3 && score_cpu[(row_count[x]+2)][temp_plus+1]!= p && score_cpu[(row_count[x]+2)][temp_plus+1]!= (p*-1)&& row_count[x]+2<N && temp_plus+1<N)
             {
                 score_cpu[(row_count[x]+2)][temp_plus+1] -= 1;
             }
@@ -95,7 +95,7 @@ void score_diagonal(int x,int p)
             {
                 score_cpu[(row_count[x]-1)][temp_minus] -= 2;
             }
-            if(score_cpu[(row_count[x]-2)][temp_minus-1] <=3 && score_cpu[(row_count[x]-2)][temp_minus]!= p && score_cpu[(row_count[x]-2)][temp_minus]!= (p*-1) && row_count[x]-2>0 && temp_minus-1>=0)
+            if(score_cpu[(row_count[x]-2)][temp_minus-1] <=3 && score_cpu[(row_count[x]-2)][temp_minus-1]!= p && score_cpu[(row_count[x]-2)][temp_minus-1]!= (p*-1) && row_count[x]-2>0 && temp_minus-1>=0)
             {
                 score_cpu[(row_count[x]-2)][temp_minus-1] -= 1;
             }
@@ -107,7 +107,7 @@ void score_diagonal(int x,int p)
             {
                 score_cpu[(row_count[x]-1)][temp_plus] -= 2;
             }
-            if(score_cpu[(row_count[x]-2)][temp_plus+1] <=3 && score_cpu[(row_count[x]-2)][temp_plus]!= p && score_cpu[(row_count[x]-2)][temp_plus]!= (p*-1)&& row_count[x]-2>0 && temp_plus+1<N)
+            if(score_cpu[(row_count[x]-2)][temp_plus+1] <=3 && score_cpu[(row_count[x]-2)][temp_plus+1]!= p && score_cpu[(row_count[x]-2)][temp_plus+1]!= (p*-1)&& row_count[x]-2>0 && temp_plus+1<N)
             {
                 score_cpu[(row_count[x]-2)][temp_plus+1] -= 1;
             }
@@ -263,7 +263,7 @@ void score_diagonal(int x,int p)
             {
                 score_player[(row_count[x]+1)][temp_minus] -= 2;
             }
-            if(score_player[(row_count[x]+2)][temp_minus-1] <=3 && score_player[(row_count[x]+2)][temp_minus]!= p && score_player[(row_count[x]+2)][temp_minus]!= (p*-1) && row_count[x]+2<N && temp_minus-1>=0)
+            if(score_player[(row_count[x]+2)][temp_minus-1] <=3 && score_player[(row_count[x]+2)][temp_minus-1]!= p && score_player[(row_count[x]+2)][temp_minus-1]!= (p*-1) && row_count[x]+2<N && temp_minus-1>=0)
             {
                 score_player[(row_count[x]+2)][temp_minus-1] -= 1;
             }
@@ -275,7 +275,7 @@ void score_diagonal(int x,int p)
             {
                 score_player[(row_count[x]+1)][temp_plus] -= 2;
             }
-            if(score_player[(row_count[x]+2)][temp_plus+1] <=3 && score_player[(row_count[x]+2)][temp_plus]!= p && score_player[(row_count[x]+2)][temp_plus]!= (p*-1)&& row_count[x]+2<N && temp_plus<N)
+            if(score_player[(row_count[x]+2)][temp_plus+1] <=3 && score_player[(row_count[x]+2)][temp_plus+1]!= p && score_player[(row_count[x]+2)][temp_plus+1]!= (p*-1)&& row_count[x]+2<N && temp_plus<N)
             {
                 score_player[(row_count[x]+2)][temp_plus+1] -= 1;
             }
@@ -287,7 +287,7 @@ void score_diagonal(int x,int p)
             {
                 score_player[(row_count[x]-1)][temp_minus] -= 2;
             }
-            if(score_player[(row_count[x]-2)][temp_minus-1] <=3 && score_player[(row_count[x]-2)][temp_minus]!= p && score_player[(row_count[x]-2)][temp_minus]!= (p*-1) && row_count[x]-2>=0 && temp_minus-1>=0)
+            if(score_player[(row_count[x]-2)][temp_minus-1] <=3 && score_player[(row_count[x]-2)][temp_minus-1]!= p && score_player[(row_count[x]-2)][temp_minus-1]!= (p*-1) && row_count[x]-2>=0 && temp_minus-1>=0)
             {
                 score_player[(row_count[x]-2)][temp_minus-1] -= 1;
             }
@@ -299,7 +299,7 @@ void score_diagonal(int x,int p)
             {
                 score_player[(row_count[x]-1)][temp_plus] -= 2;
             }
-            if(score_player[(row_count[x]-2)][temp_plus+1] <=3 && score_player[(row_count[x]-2)][temp_plus]!= p && score_player[(row_count[x]-2)][temp_plus]!= (p*-1)&& row_count[x]-2>=0 && temp_plus<N)
+            if(score_player[(row_count[x]-2)][temp_plus+1] <=3 && score_player[(row_count[x]-2)][temp_plus+1]!= p && score_player[(row_count[x]-2)][temp_plus+1]!= (p*-1)&& row_count[x]-2>=0 && temp_plus<N)
             {
                 score_player[(row_count[x]-2)][temp_plus+1] -= 1;
             }
@@ -465,7 +465,7 @@ void score_row(int x, int p)
             {
                 score_cpu[(row_count[x])][temp_minus] -= 4;
             }
-            if(score_cpu[(row_count[x])][temp_minus-1] <=3 && score_cpu[(row_count[x])][temp_minus]!= p && score_cpu[(row_count[x])][temp_minus]!= (p*-1)&&temp_minus-1>=0)
+            if(score_cpu[(row_count[x])][temp_minus-1] <=3 && score_cpu[(row_count[x])][temp_minus-1]!= p && score_cpu[(row_count[x])][temp_minus-1]!= (p*-1)&&temp_minus-1>=0)
             {
                 score_cpu[(row_count[x])][temp_minus-1] -= 1;
             }
@@ -476,7 +476,7 @@ void score_row(int x, int p)
             {
                 score_cpu[(row_count[x])][temp_plus] -= 4;
             }
-            if(score_cpu[(row_count[x])][temp_plus+1] <=3 && score_cpu[(row_count[x])][temp_plus]!= p && score_cpu[(row_count[x])][temp_plus]!= (p*-1)&&temp_plus+1<N)
+            if(score_cpu[(row_count[x])][temp_plus+1] <=3 && score_cpu[(row_count[x])][temp_plus+1]!= p && score_cpu[(row_count[x])][temp_plus+1]!= (p*-1)&&temp_plus+1<N)
             {
                 score_cpu[(row_count[x])][temp_plus+1] -= 1;
             }
@@ -485,14 +485,14 @@ void score_row(int x, int p)
         temp_minus = x - 2;
         if(score_player[(row_count[x])][temp_plus] == (p*-1) && temp_minus+1>=0)
         {
-            if(score_cpu[(row_count[x])][temp_minus+1] <=4 && score_cpu[(row_count[x])][temp_minus]!= p && score_cpu[(row_count[x])][temp_minus]!= (p*-1))
+            if(score_cpu[(row_count[x])][temp_minus+1] <=4 && score_cpu[(row_count[x])][temp_minus+1]!= p && score_cpu[(row_count[x])][temp_minus+1]!= (p*-1))
             {
                 score_cpu[(row_count[x])][temp_minus+1] -= 1;
             }
         }
         if(score_player[(row_count[x])][temp_minus] == (p*-1) && temp_plus-1<N)
         {
-            if(score_cpu[(row_count[x])][temp_plus-1] <=4 && score_cpu[(row_count[x])][temp_plus]!= p && score_cpu[(row_count[x])][temp_plus]!= (p*-1))
+            if(score_cpu[(row_count[x])][temp_plus-1] <=4 && score_cpu[(row_count[x])][temp_plus-1]!= p && score_cpu[(row_count[x])][temp_plus-1]!= (p*-1))
             {
                 score_cpu[(row_count[x])][temp_plus-1] -= 1;
             }
@@ -554,7 +554,7 @@ void score_row(int x, int p)
             {
                 score_player[(row_count[x])][temp_minus] -= 4;
             }
-            if(score_player[(row_count[x])][temp_minus-1] <=3 && score_player[(row_count[x])][temp_minus]!= p && score_player[(row_count[x])][temp_minus]!= (p*-1) && temp_minus-1>=0)
+            if(score_player[(row_count[x])][temp_minus-1] <=3 && score_player[(row_count[x])][temp_minus-1]!= p && score_player[(row_count[x])][temp_minus-1]!= (p*-1) && temp_minus-1>=0)
             {
                 score_player[(row_count[x])][temp_minus-1] -= 1;
             }
@@ -565,7 +565,7 @@ void score_row(int x, int p)
             {
                 score_player[(row_count[x])][temp_plus] -= 4;
             }
-            if(score_player[(row_count[x])][temp_plus+1] <=3 && score_player[(row_count[x])][temp_plus]!= p && score_player[(row_count[x])][temp_plus]!= (p*-1) && temp_plus+1<N)
+            if(score_player[(row_count[x])][temp_plus+1] <=3 && score_player[(row_count[x])][temp_plus+1]!= p && score_player[(row_count[x])][temp_plus+1]!= (p*-1) && temp_plus+1<N)
             {
                 score_player[(row_count[x])][temp_plus+1] -= 1;
             }
@@ -574,14 +574,14 @@ void score_row(int x, int p)
         temp_minus = x - 2;
         if(score_cpu[(row_count[x])][temp_plus] == (p*-1) && temp_minus+1>=0)
         {
-            if(score_player[(row_count[x])][temp_minus+1] <=4 && score_player[(row_count[x])][temp_minus]!= p && score_player[(row_count[x])][temp_minus]!= (p*-1))
+            if(score_player[(row_count[x])][temp_minus+1] <=4 && score_player[(row_count[x])][temp_minus+1]!= p && score_player[(row_count[x])][temp_minus+1]!= (p*-1))
             {
                 score_player[(row_count[x])][temp_minus+1] -= 1;
             }
         }
         if(score_cpu[(row_count[x])][temp_minus] == (p*-1)&&temp_plus-1<N)
         {
-            if(score_player[(row_count[x])][temp_plus-1] <=4 && score_player[(row_count[x])][temp_plus]!= p && score_player[(row_count[x])][temp_plus]!= (p*-1))
+            if(score_player[(row_count[x])][temp_plus-1] <=4 && score_player[(row_count[x])][temp_plus-1]!= p && score_player[(row_count[x])][temp_plus-1]!= (p*-1))
             {
                 score_player[(row_count[x])][temp_plus-1] -= 1;
             }
@@ -638,10 +638,10 @@ void score_col(int x, int p)
     // Player score
     if (p == 99)
     {
-        if(score_player[temp_row+1][x]==(p*-1) && temp_row-1>0)
+        if(score_player[temp_row+1][x]==(p*-1) && temp_row-1>=0)
         {
             score_cpu[temp_row-1][x]-= 3;
-            if(temp_row-2>0)
+            if(temp_row-2>=0)
             {
                 score_cpu[temp_row-2][x]-= 1;
             }
@@ -664,10 +664,10 @@ void score_col(int x, int p)
     //Score for CPU
     if(p == -99)
     {
-        if(score_cpu[temp_row+1][x]==(p*-1) && temp_row-1>0)
+        if(score_cpu[temp_row+1][x]==(p*-1) && temp_row-1>=0)
         {
             score_player[temp_row-1][x]-= 3;
-            if(temp_row-2>0)
+            if(temp_row-2>=0)
             {
                 score_player[temp_row-2][x]-= 1;
             }
@@ -930,9 +930,9 @@ int CPU_play()
     }
     else{
         for (int i=0; i<N; i++) {
-            check(i, -99);
+            check(i, 99);
         }
-        if (winningCol!=0 && winningDia!=0 && winningRow!=0) {
+        if (winningCol==0 && winningDia==0 && winningRow==0) {
             int pmax = check_playerRowCount();
             int cmax = check_cpuRowCount();
             if (score_player[row_count[pmax]][pmax]>4) {
@@ -966,7 +966,7 @@ int main(int argc, const char * argv[]) {
         input(player);
         player*=-1;
         if (player==-99) {
-            cout<<"Predicted col number is "<<CPU_play()<<endl;
+            cout<<CPU_play()<<" is the predicted col number"<<endl;
         }
         display();
         i++;
