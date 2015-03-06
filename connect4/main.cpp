@@ -21,6 +21,9 @@ int col = 0;
 int state;
 int row_count[N] = {7,7,7,7,7,7,7,7};
 bool firstPlay = true;
+int winningRow = 0;
+int winningCol = 0;
+int winningDia = 0;
 
 void check(int x, int p);
 void check_col(int x, int p);
@@ -458,9 +461,9 @@ void score_row(int x, int p)
         temp_minus = x - 1;
         if(score_player[(row_count[x])][temp_plus] == (p*-1) && temp_minus>=0)
         {
-            if(score_cpu[(row_count[x])][temp_minus] <= 3 && score_cpu[(row_count[x])][temp_minus]!= p && score_cpu[(row_count[x])][temp_minus]!= (p*-1))
+            if(score_cpu[(row_count[x])][temp_minus] <= 7 && score_cpu[(row_count[x])][temp_minus]!= p && score_cpu[(row_count[x])][temp_minus]!= (p*-1))
             {
-                score_cpu[(row_count[x])][temp_minus] -= 2;
+                score_cpu[(row_count[x])][temp_minus] -= 4;
             }
             if(score_cpu[(row_count[x])][temp_minus-1] <=3 && score_cpu[(row_count[x])][temp_minus]!= p && score_cpu[(row_count[x])][temp_minus]!= (p*-1)&&temp_minus-1>=0)
             {
@@ -469,9 +472,9 @@ void score_row(int x, int p)
         }
         if(score_player[(row_count[x])][temp_minus] == (p*-1) && temp_plus<N)
         {
-            if(score_cpu[(row_count[x])][temp_plus] <= 3 && score_cpu[(row_count[x])][temp_plus]!= p && score_cpu[(row_count[x])][temp_plus]!= (p*-1))
+            if(score_cpu[(row_count[x])][temp_plus] <= 7 && score_cpu[(row_count[x])][temp_plus]!= p && score_cpu[(row_count[x])][temp_plus]!= (p*-1))
             {
-                score_cpu[(row_count[x])][temp_plus] -= 2;
+                score_cpu[(row_count[x])][temp_plus] -= 4;
             }
             if(score_cpu[(row_count[x])][temp_plus+1] <=3 && score_cpu[(row_count[x])][temp_plus]!= p && score_cpu[(row_count[x])][temp_plus]!= (p*-1)&&temp_plus+1<N)
             {
@@ -482,20 +485,20 @@ void score_row(int x, int p)
         temp_minus = x - 2;
         if(score_player[(row_count[x])][temp_plus] == (p*-1) && temp_minus+1>=0)
         {
-            if(score_cpu[(row_count[x])][temp_minus+1] <=3 && score_cpu[(row_count[x])][temp_minus]!= p && score_cpu[(row_count[x])][temp_minus]!= (p*-1))
+            if(score_cpu[(row_count[x])][temp_minus+1] <=4 && score_cpu[(row_count[x])][temp_minus]!= p && score_cpu[(row_count[x])][temp_minus]!= (p*-1))
             {
                 score_cpu[(row_count[x])][temp_minus+1] -= 1;
             }
         }
         if(score_player[(row_count[x])][temp_minus] == (p*-1) && temp_plus-1<N)
         {
-            if(score_cpu[(row_count[x])][temp_plus-1] <=3 && score_cpu[(row_count[x])][temp_plus]!= p && score_cpu[(row_count[x])][temp_plus]!= (p*-1))
+            if(score_cpu[(row_count[x])][temp_plus-1] <=4 && score_cpu[(row_count[x])][temp_plus]!= p && score_cpu[(row_count[x])][temp_plus]!= (p*-1))
             {
                 score_cpu[(row_count[x])][temp_plus-1] -= 1;
             }
         }
         
-        for(i=1,j=3 ; i<4 ; i++,j--)
+        for(i=1,j=7 ; i<4 ; i++,j-=3)
         {
             temp_plus = x + i;
             temp_minus = x - i;
@@ -547,9 +550,9 @@ void score_row(int x, int p)
         temp_minus = x - 1;
         if(score_cpu[(row_count[x])][temp_plus] == (p*-1) && temp_minus>=0)
         {
-            if(score_player[(row_count[x])][temp_minus] <= 3 && score_player[(row_count[x])][temp_minus]!= p && score_player[(row_count[x])][temp_minus]!= (p*-1))
+            if(score_player[(row_count[x])][temp_minus] <= 7 && score_player[(row_count[x])][temp_minus]!= p && score_player[(row_count[x])][temp_minus]!= (p*-1))
             {
-                score_player[(row_count[x])][temp_minus] -= 2;
+                score_player[(row_count[x])][temp_minus] -= 4;
             }
             if(score_player[(row_count[x])][temp_minus-1] <=3 && score_player[(row_count[x])][temp_minus]!= p && score_player[(row_count[x])][temp_minus]!= (p*-1) && temp_minus-1>=0)
             {
@@ -558,9 +561,9 @@ void score_row(int x, int p)
         }
         if(score_cpu[(row_count[x])][temp_minus] == (p*-1) && temp_plus<N)
         {
-            if(score_player[(row_count[x])][temp_plus] <= 3 && score_player[(row_count[x])][temp_plus]!= p && score_player[(row_count[x])][temp_plus]!= (p*-1))
+            if(score_player[(row_count[x])][temp_plus] <= 7 && score_player[(row_count[x])][temp_plus]!= p && score_player[(row_count[x])][temp_plus]!= (p*-1))
             {
-                score_player[(row_count[x])][temp_plus] -= 2;
+                score_player[(row_count[x])][temp_plus] -= 4;
             }
             if(score_player[(row_count[x])][temp_plus+1] <=3 && score_player[(row_count[x])][temp_plus]!= p && score_player[(row_count[x])][temp_plus]!= (p*-1) && temp_plus+1<N)
             {
@@ -571,20 +574,20 @@ void score_row(int x, int p)
         temp_minus = x - 2;
         if(score_cpu[(row_count[x])][temp_plus] == (p*-1) && temp_minus+1>=0)
         {
-            if(score_player[(row_count[x])][temp_minus+1] <=3 && score_player[(row_count[x])][temp_minus]!= p && score_player[(row_count[x])][temp_minus]!= (p*-1))
+            if(score_player[(row_count[x])][temp_minus+1] <=4 && score_player[(row_count[x])][temp_minus]!= p && score_player[(row_count[x])][temp_minus]!= (p*-1))
             {
                 score_player[(row_count[x])][temp_minus+1] -= 1;
             }
         }
         if(score_cpu[(row_count[x])][temp_minus] == (p*-1)&&temp_plus-1<N)
         {
-            if(score_player[(row_count[x])][temp_plus-1] <=3 && score_player[(row_count[x])][temp_plus]!= p && score_player[(row_count[x])][temp_plus]!= (p*-1))
+            if(score_player[(row_count[x])][temp_plus-1] <=4 && score_player[(row_count[x])][temp_plus]!= p && score_player[(row_count[x])][temp_plus]!= (p*-1))
             {
                 score_player[(row_count[x])][temp_plus-1] -= 1;
             }
         }
         
-        for(i=1,j=3 ; i<4 ; i++,j--)
+        for(i=1,j=7 ; i<4 ; i++,j-=3)
         {
             temp_plus = x + i;
             temp_minus = x - i;
@@ -637,13 +640,13 @@ void score_col(int x, int p)
     {
         if(score_player[temp_row+1][x]==(p*-1) && temp_row-1>0)
         {
-            score_cpu[temp_row-1][x]-= 2;
+            score_cpu[temp_row-1][x]-= 3;
             if(temp_row-2>0)
             {
                 score_cpu[temp_row-2][x]-= 1;
             }
         }
-        for(i=1,j=3 ; i<4 ; i++,j--)
+        for(i=1,j=5 ; i<4 ; i++,j-=2)
         {
             temp_plus = temp_row - i;
             if (score_player[temp_plus][x] == (p*-1))
@@ -663,13 +666,13 @@ void score_col(int x, int p)
     {
         if(score_cpu[temp_row+1][x]==(p*-1) && temp_row-1>0)
         {
-            score_player[temp_row-1][x]-= 2;
+            score_player[temp_row-1][x]-= 3;
             if(temp_row-2>0)
             {
                 score_player[temp_row-2][x]-= 1;
             }
         }
-        for(i=1,j=3 ; i<4 ; i++,j--)
+        for(i=1,j=5 ; i<4 ; i++,j-=2)
         {
             temp_plus = temp_row - i;
             if (score_cpu[temp_plus][x] == (p*-1))
@@ -772,6 +775,8 @@ void check_col(int x, int p)
     if (win_count >= 3)
     {
         cout<<endl<<"Player " <<p<<" WINS - column"<<endl;
+        winningCol = x;
+        
     }
 }
 
@@ -841,6 +846,7 @@ void check_diag(int x, int p)
     if (win_count_left >= 3 || win_count_right >= 3 )
     {
         cout<<endl<<"Player " <<p<<" WINS"<<endl;
+        winningDia = x;
     }
 }
 
@@ -882,6 +888,7 @@ void check_row(int x, int p)
     if (win_count >= 3)
     {
         cout<<endl<<"Player " <<p<<" WINS"<<endl;
+        winningRow = x;
     }
 }
 
@@ -911,26 +918,42 @@ int check_cpuRowCount()
 int CPU_play()
 {
     int randnum;
+    winningCol =0;
+    winningDia =0;
+    winningRow =0;
     //First move random
     if (firstPlay){
         //random assignment
-        randnum = rand() % 8;
+        randnum = (rand() % 4)+2;
         firstPlay = false;
         return randnum;
     }
     else{
-        int pmax = check_playerRowCount();
-        int cmax = check_cpuRowCount();
-        if (score_player[row_count[pmax]][pmax]>4) {
-            return pmax;
+        for (int i=0; i<N; i++) {
+            check(i, -99);
+        }
+        if (winningCol!=0 && winningDia!=0 && winningRow!=0) {
+            int pmax = check_playerRowCount();
+            int cmax = check_cpuRowCount();
+            if (score_player[row_count[pmax]][pmax]>4) {
+                return pmax;
+            }
+            else{
+                return cmax;
+            }
         }
         else{
-            return cmax;
+            if (winningDia!=0) {
+                return winningDia;
+            }
+            else if (winningRow!=0){
+                return winningRow;
+            }
+            else return winningCol;
         }
+        
     }
     // Check row_count
-    
-    
 }
 
 int main(int argc, const char * argv[]) {
@@ -949,6 +972,5 @@ int main(int argc, const char * argv[]) {
         i++;
     }
     
-    cin;
     return 0;
 }
