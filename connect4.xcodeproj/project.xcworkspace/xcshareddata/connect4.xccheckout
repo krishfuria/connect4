@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>653EF612-2EFC-4D25-8F96-52096DFEB801</string>
+	<key>IDESourceControlProjectName</key>
+	<string>connect4</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>B434999C376DEDF31171903143B3EFEDE3B26426</key>
+		<string>github.com:krishfuria13/connect4.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>connect4.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>B434999C376DEDF31171903143B3EFEDE3B26426</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>github.com:krishfuria13/connect4.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>B434999C376DEDF31171903143B3EFEDE3B26426</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>B434999C376DEDF31171903143B3EFEDE3B26426</string>
+			<key>IDESourceControlWCCName</key>
+			<string>connect4</string>
+		</dict>
+	</array>
+</dict>
+</plist>
